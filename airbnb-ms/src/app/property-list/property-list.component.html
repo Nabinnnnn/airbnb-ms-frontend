@@ -1,0 +1,64 @@
+ <hr>
+<h2>Property List</h2>
+<hr>
+
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-warning" title="Add new property"routerLink="/new">➕</button><br><br>
+    </div>
+    <div class="col-md-3">
+        <input class="form-control" [(ngModel)]="searchValue"  title="filter" placeholder="Filter by price ">
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-success" (click)="search()">☰</button>
+    </div>
+    <div class="col-md-5">
+        <input class="form-control" [(ngModel)]="city" placeholder="Enter city name ">
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-success" title="Search"(click)="searchByCity()"> 🔍 </button>
+    </div>
+</div>
+<div class="table-responsive mt-3">
+
+<table class="table table-striped table-bordered table-hover">
+    <thead >
+        <tr>
+            <th>Id</th>
+            <th> Name</th>
+            <th>Price</th>
+            <th> Description</th>
+            
+            <th>Action</th>
+                
+          </tr>
+            </thead> 
+    
+    <tbody>
+        <tr *ngFor="let property of propertyList">
+            <td>{{property.id}}</td>
+            <td>{{property.name}}</td>
+            <td>{{property.price}}</td>
+            <td>{{property.description}}</td>
+           
+            <td><button  title="Details" [routerLink]="['/detail/',property.id]">ℹ️</button>
+                <button class="btn btn-primary m-lg-1 " title="Edit" [routerLink]="['/update/',property.id]" > ✏️ </button> 
+                 <button class="btn btn-danger m-lg-1" title="Delete" (click)="deleteProperty(property.id)"> 🗑 </button> </td>
+        
+          
+                
+            </tr>
+        
+
+            
+           
+                  
+              
+          </tbody>
+      </table>
+      </div> 
+
+
+       <!-- <td><button class="btn btn-primary " title="Edit" [routerLink]="['/update/',student.id]"> ✏️ </button> -->
+                <!-- <button class="btn btn-danger m-lg-1" title="Delete" (click)="deleteStudent(student.id)"> 🗑 </button> </td>-->
+              

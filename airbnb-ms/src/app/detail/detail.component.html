@@ -1,0 +1,61 @@
+
+
+  
+  <h4 class="display-4"> Unwind and Discover</h4>
+  <p>Your Perfect Vacation Awaits</p>
+  <p>Time to embrace happiness and create lasting memories</p>
+
+
+ 
+    
+    <div class="row justify-content-center mt-8">
+      <div class="col-md-6 mb-4">
+        <a class="btn btn-warning btn-block" routerLink="">Explore Destinations</a>
+      </div>
+      <div class="col-md-6 mb-8">
+        <a class="btn btn-primary btn-block" [routerLink]="['/booking/',address.id]">Book Now</a>
+      </div>
+      
+    
+  </div>
+  <div class="container address-section text-center">
+    
+    <p>Email: info@airbnb.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+    <p> Address: {{address.houseNumber}} {{address.streetName}},{{address.city}},{{address.state}}-{{address.zipCode}}</p>
+  </div>
+  <hr>
+  <h3>Booking List</h3>
+  <hr>
+<div class="table table-responsive mt-3">
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Check In Date</th>
+        <th>Check Out Date</th>
+        <th> Guest Count</th>
+        <th>Payment</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookingList">
+        <td>{{booking.id}}</td>
+        <td>{{booking.checkInDate}}</td>
+        <td>{{booking.checkOutDate}}</td>
+        <td>{{booking.guestCount}}</td>
+        <td>
+          <ng-container *ngIf="booking.payment">
+          {{booking.payment.amountPaid}}
+        </ng-container>
+      </td>
+      <td><button class="btn btn-primary m-lg-1 " title="Edit" [routerLink]="['/booking/',booking.id]" > ✏️ </button> 
+        <button class="btn btn-danger m-lg-1" title="Delete" (click)="deleteBooking(booking.id)"> 🗑 </button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

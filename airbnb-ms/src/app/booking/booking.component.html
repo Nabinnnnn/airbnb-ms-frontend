@@ -1,0 +1,36 @@
+<div class="container mt-5">
+<hr>
+<div style="margin-top:3px; color:black; background-color: antiquewhite;"><h3>Booking Form</h3></div>
+<hr>
+<form style="margin-left: 1px; color:black"[formGroup]="bookingForm" (ngSubmit)="saveBooking()">
+  
+    <div class="form-group">
+      
+          <label for="checkInDate">Check-in Date</label><br>
+          <input type="date" class="form-control" id="checkInDate" name="checkInDate" formControlName="checkInDate">
+        </div>
+      
+        <div class="form-group">
+          <label for="checkOutDate">Check-out Date</label>
+          <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" formControlName="checkOutDate">
+        </div>
+      
+    
+    <div class="form-group">
+      <label for="guestCount">Guest Count</label>
+      <input type="number" class="form-control" id="guestCount" name="guestCount" formControlName="guestCount" >
+    </div>
+
+    <div formGroupName="payment">
+    <div class="form-group">
+      <label for="amountPaid">Amount Paid</label>
+      <input type="number" class="form-control" id="amountPaid" name="amountPaid" formControlName="amountPaid">
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book Now</button>
+  </form>
+</div>
+
+
+
