@@ -24,14 +24,14 @@ deleteBooking(id: number):Observable<string> {
 updateBooking(id:number,booking:Booking):Observable<string>{
   //@ts-ignore
 
-  return this.http.put<String>(this.url.concat(String("/"+id)),{responseType:'text'});
+  return this.http.put<String>(this.url.concat(String("/"+id)),booking,{responseType:'text'});
 }
 getBookingByBookingId(id: number):Observable<Booking>{
 return this.http.get<Booking>(this.url.concat(String("/bookingId/"+id)))
 }
-addBooking(booking:Booking):Observable<Booking> {
+addBooking(booking:Booking):Observable<string> {
   //@ts-ignore
-  return this.http.post<Booking>(this.url,booking,{responseType:'text'});
+  return this.http.post<string>(this.url,booking,{responseType:'text'});
   
 }
 

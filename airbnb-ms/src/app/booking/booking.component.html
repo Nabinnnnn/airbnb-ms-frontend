@@ -3,6 +3,11 @@
 <div style="margin-top:3px; color:black; background-color: antiquewhite;"><h3>Booking Form</h3></div>
 <hr>
 <form style="margin-left: 1px; color:black"[formGroup]="bookingForm" (ngSubmit)="saveBooking()">
+  <div class="form-group">
+      
+    <label for="propertyId">Property Id: {{idFromUrl}}</label><br>
+    <input type="number" class="form-control" id="propertyId" name="propertyId" formControlName="propertyId" >
+  </div>
   
     <div class="form-group">
       
@@ -28,7 +33,9 @@
     </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Book Now</button>
+    <button type="submit" class="btn btn-primary">Book Now</button><br>
+    <button type="button" class="btn btn-outline-secondary" (click)="cancelBooking()">Cancel</button>
+
   </form>
 </div>
 

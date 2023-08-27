@@ -50,8 +50,8 @@
           {{booking.payment.amountPaid}}
         </ng-container>
       </td>
-      <td><button class="btn btn-primary m-lg-1 " title="Edit" [routerLink]="['/booking/',booking.id]" > ✏️ </button> 
-        <button class="btn btn-danger m-lg-1" title="Delete" (click)="deleteBooking(booking.id)"> 🗑 </button> </td>
+      <td><button class="btn btn-primary m-lg-1 " title="Edit Booking" [routerLink]="['/booking/',booking.id]" > ✏️ </button> 
+        <button class="btn btn-dark m-lg-1" title="Cancel Booking" (click)="deleteBooking(booking.id)"> ❌</button> </td>
       </tr>
     </tbody>
   </table>

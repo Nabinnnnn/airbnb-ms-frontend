@@ -4,6 +4,7 @@ export class Booking {
     checkOutDate?: Date;
     guestCount?: number;
     payment?: Payment;
+    propertyId?:number;
 }
 
 export class Payment {

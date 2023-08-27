@@ -35,7 +35,7 @@ constructor(
         state: [''],
         zipCode: ['']
       }),
-      booking: [[]]
+      
 
 
 

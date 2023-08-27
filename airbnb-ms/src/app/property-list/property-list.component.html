@@ -41,8 +41,8 @@
             <td>{{property.price}}</td>
             <td>{{property.description}}</td>
            
-            <td><button  title="Details" [routerLink]="['/detail/',property.id]">ℹ️</button>
-                <button class="btn btn-primary m-lg-1 " title="Edit" [routerLink]="['/update/',property.id]" > ✏️ </button> 
+            <td><button class ="btn btn-info" title="Details" [routerLink]="['/detail/',property.id]">ℹ️</button>
+                <button class="btn btn-light m-lg-1 " title="Edit" [routerLink]="['/update/',property.id]" > ✏️ </button> 
                  <button class="btn btn-danger m-lg-1" title="Delete" (click)="deleteProperty(property.id)"> 🗑 </button> </td>
         
           

@@ -51,6 +51,7 @@ export class DetailComponent implements OnInit {
   }
   deleteBooking(id:number){
     this.bookingService.deleteBooking(id).subscribe(data=>{
+      alert("This will cancel your booking");
       this.showBooking();
     })
   }
