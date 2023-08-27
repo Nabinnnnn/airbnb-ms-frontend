@@ -14,9 +14,12 @@ export class PropertyService {
   getAllProperty():Observable<Property[]> {
     return this.http.get<Property[]>(this.url);
 }
-deleteProperty(id:number):Observable<string>{
+deleteProperty(id:number):Observable<String>{
+  
   //@ts-ignore
-  return this.http.delete<String>(this.url.concat(String("/"+id)),{responseType:'text'});
+  
+  return this.http.delete<string>(`${this.url}/${id}`, { responseType: 'text' });
+
 }
 search(searchValue: String):Observable<Property[]> {
   return this.http.get<Property[]>(this.url.concat(String("/price/"+searchValue)));

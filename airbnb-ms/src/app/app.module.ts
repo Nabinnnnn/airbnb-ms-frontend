@@ -8,6 +8,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { DetailComponent } from './detail/detail.component';
 import { BookingComponent } from './booking/booking.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BookingComponent } from './booking/booking.component';
     NewPropertyComponent,
     PropertyListComponent,
     DetailComponent,
-    BookingComponent
+    BookingComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

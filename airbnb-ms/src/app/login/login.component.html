@@ -1,0 +1,41 @@
+<div class="container">
+  <div style="margin-top: 3px; color: black; background-color: beige; font-style: normal; font-size: x-large; text-align: center;">
+    <h2>Welcome to Airbnb</h2>
+    <p>Your Dream Vacation Awaits</p>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img src="https://assets.vogue.com/photos/60a55d808d0a37a4ca0ebbcc/16:9/w_896,h_504,c_limit/00_promo.gif" alt="Promo GIF" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h3>Discover Your Perfect Vacation</h3>
+      <p>Explore a variety of accommodations and find the perfect place for your next getaway.</p>
+      <a class="btn btn-primary" href="#" role="button">Browse Properties</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Contact Us</h3>
+      <p>Have questions or need assistance? Contact us for support.</p>
+      <p><strong>Phone:</strong> <a href="tel:+1234567890">123-456-7890</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@airbnb.com">info@airbnb.com</a></p>
+    </div>
+    <div class="col-md-6">
+      <form style="margin-top: 20px; color: rgb(13, 5, 57);" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input class="form-control" type="email" id="email" formControlName="email" placeholder="Enter a valid email.">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input class="form-control" type="password" id="Password" formControlName="password" placeholder="Password">
+        </div>
+        <button class="btn btn-success m-3" type="submit" [disabled]="loginForm.invalid">Login</button>
+        <a class="btn btn-warning m-3" routerLink="signup">Sign Up</a>
+      </form>
+    </div>
+  </div>
+</div>

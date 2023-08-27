@@ -31,6 +31,7 @@ constructor(private propertyService:PropertyService){}
       this.propertyService.deleteProperty(id).subscribe(message=>{
         
         this.getProperty();
+        alert(message);
 
         
       })
